@@ -2,7 +2,7 @@ node('master')
 {
     stage('ContinuousDeployment_loans')
     {
-sh 'scp /home/ubuntu/.jenkins/workspace/MultiP_master/webapp/target/webapp.war ubuntu@172.31.33.103:/var/lib/tomcat8/webapps/testapp.war'
+sh 'scp /home/ubuntu/.jenkins/workspace/MultiP/webapp/target/webapp.war ubuntu@172.31.33.103:/var/lib/tomcat8/webapps/testapp.war'
     }
 
     stage('ContinuousTesting_loans')
@@ -13,5 +13,5 @@ sh 'scp /home/ubuntu/.jenkins/workspace/MultiP_master/webapp/target/webapp.war u
     stage('ContinuousDelivery_loans')
     {
     
-    sh 'scp /home/ubuntu/.jenkins/workspace/MultiP_master/webapp/target/webapp.war ubuntu@172.31.42.175:/var/lib/tomcat9/webapps/prodapp.war'}
+    sh 'scp /home/ubuntu/.jenkins/workspace/MultiP/webapp/target/webapp.war ubuntu@172.31.42.175:/var/lib/tomcat9/webapps/prodapp.war'}
 }
